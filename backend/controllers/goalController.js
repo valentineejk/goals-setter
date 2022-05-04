@@ -1,12 +1,12 @@
 const asyncHandler=require('express-async-handler')
-const GoalModel=require('../models/goalModel')
+const goal=require('../models/goalModel')
 
 // @desc Get Goals
 // @route Get /api/goals
 //@access Private
 const getGoals=asyncHandler(async (req,res) => {
 
-    const goals=await GoalModel.find({})
+    const goals=await goal.find({})
     res.status(200).json(goals)
 })
 
@@ -21,7 +21,7 @@ const setGoal=asyncHandler(async (req,res) => {
         throw new Error('please add a text field')
     }
 
-    const goal=await GoalModel.create({
+    const goal=await goal.create({
         text: req.body.text
     })
 
@@ -37,14 +37,14 @@ const setGoal=asyncHandler(async (req,res) => {
 //@access Private
 const updateGoal=asyncHandler(async (req,res) => {
 
-    const goal=await GoalModel.findById(req.params.id)
+    const goal=await goal.findById(req.params.id)
 
     if(!goal) {
         res.status(400)
         throw new Error('Goal Not Found')
     }
 
-    const updatedGoal=await GoalModel.findByIdAndUpdate(
+    const updatedGoal=await goal.findByIdAndUpdate(
         req.params.id,
         req.body,
         {new: true,})
@@ -57,7 +57,7 @@ const updateGoal=asyncHandler(async (req,res) => {
 //@access Private
 const deleteGoal=asyncHandler(async (req,res) => {
 
-    const goal=await GoalModel.findById(req.params.id)
+    const goal=await goal.findById(req.params.id)
 
     if(!goal) {
         res.status(400)
