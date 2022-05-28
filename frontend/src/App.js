@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
 
 import './index.css';
 import Dashboard from './screens/Dashboard';
@@ -11,13 +12,13 @@ function App() {
     <>
       <Router>
         <div className="container">
-          hey
+          <Header />
+          <Routes>
+            <Route path="/" element={ <Dashboard /> } />
+            <Route path="/login" element={ <Login /> } />
+            <Route path="/Register" element={ <Register /> } />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="/" element={ <Dashboard /> } />
-          <Route path="/login" element={ <Login /> } />
-          <Route path="/Register" element={ <Register /> } />
-        </Routes>
       </Router>
     </>
   );
