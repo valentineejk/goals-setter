@@ -51,7 +51,7 @@ const deleteGoal = async (goalId, token) => {
 const goalApi = {
     createGoal,
     getGoals,
-    deleteGoal
+    deleteGoal,
 }
 
 export default goalApi;
