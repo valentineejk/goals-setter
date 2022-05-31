@@ -8,6 +8,8 @@ import { register, reset } from '../features/auth/authSlice';
 import Spinner from '../components/Spinner';
 
 
+
+
 const Register = () => {
 
 
