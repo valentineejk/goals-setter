@@ -1,8 +1,9 @@
 import { useDispatch } from 'react-redux'
 import { deleteGoal } from '../features/goals/goalSlice'
-
+import React from 'react'
 
 const GoalItem = ({ goal }) => {
+
     const dispatch = useDispatch()
 
 
