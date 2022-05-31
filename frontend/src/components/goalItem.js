@@ -17,3 +17,4 @@ const GoalItem = ({ goal }) => {
     )
 }
 
+export default GoalItem
