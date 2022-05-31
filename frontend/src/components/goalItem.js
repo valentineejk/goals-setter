@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux'
 import { deleteGoal } from '../features/goals/goalSlice'
 
-function GoalItem({ goal }) {
+
+const GoalItem = ({ goal }) => {
     const dispatch = useDispatch()
+
 
     return (
         <div className='goal'>
@@ -14,5 +16,4 @@ function GoalItem({ goal }) {
         </div>
     )
 }
-//mu
-export default GoalItem
+
