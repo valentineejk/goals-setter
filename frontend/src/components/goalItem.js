@@ -16,5 +16,6 @@ const GoalItem = ({ goal }) => {
         </div>
     )
 }
+//yo
 
 export default GoalItem

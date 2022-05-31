@@ -6,6 +6,9 @@ import Spinner from '../components/Spinner'
 import { reset, getGoals } from '../features/goals/goalSlice'
 import GoalItem from '../components/GoalItem'
 
+
+//yo
+
 const Dashboard = () => {
 
     const navigate = useNavigate()
